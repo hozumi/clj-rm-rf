@@ -1,17 +1,16 @@
 # clj-rm-rf
 
-FIXME: write description
+Recursively remove directory/file function for Clojure.
 
 ## Usage
 
-FIXME: write
+    (use 'hozumi.rm-rf)
+
+    (rm-rf (File. "garbage"))
+    (rm-rf (File. "garbage") :silently)
 
 ## Installation
 
-FIXME: write
+Leiningen
+    [clj-rm-rf "1.0.0-SNAPSHOT"]
 
-## License
-
-Copyright (C) 2010 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
