@@ -1,13 +1,13 @@
 # clj-rm-rf
 
-Recursively remove directory/file function for Clojure.
+Recursively remove directory/file for Clojure.
 
 ## Usage
 
     (use 'hozumi.rm-rf)
 
-    (rm-rf (File. "garbage"))
-    (rm-rf (File. "garbage") :silently)
+    (rm-r (File. "garbage"))
+    (rm-r (File. "garbage") :silently)
 
 ## Installation
 

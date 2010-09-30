@@ -35,13 +35,13 @@
        ["lab" ["lob"]]]
       "a.clj"])
 
-(deftest test-rm-rf
+(deftest test-rm-r
   (testing "make and delete dirs"
     (let [dir (mk-tmpfs (io/file (System/getProperty
 				  "java.io.tmpdir"))
 			deep-fs)]
       (is (.exists dir))
       (is (< 0 (count (.listFiles dir))))
-      (rm-rf dir :silently)
+      (rm-r dir :silently)
       (is (= 0 (count (.listFiles dir))))
       (is (not (.exists dir))))))

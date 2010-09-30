@@ -1,7 +1,7 @@
 (ns hozumi.rm-rf
   (:require [clojure.java.io :as io :only [delete-file]]))
 
-(defn rm-rf [f & [silently]]
+(defn rm-r [f & [silently]]
   (if (.isDirectory f)
-    (dorun (map #(rm-rf % silently) (.listFiles f))))
+    (dorun (map #(rm-r % silently) (.listFiles f))))
   (io/delete-file f silently))
